@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>opencv_image</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>124</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Open Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Reload Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="open_video">
+       <property name="text">
+        <string>Open Video</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save_imageButton_3">
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>159</x>
+      <y>29</y>
+      <width>941</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label2">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="image_process">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="defaultUp">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="basic_process">
+    <property name="title">
+     <string>basic_process</string>
+    </property>
+    <addaction name="actionSalt_pepper"/>
+    <addaction name="actionReduce_color"/>
+    <addaction name="actionImage_gray"/>
+    <addaction name="actionSharpen"/>
+    <addaction name="actionChannel_split_B"/>
+    <addaction name="actionChannel_split_G"/>
+    <addaction name="actionCahnnel_split_R"/>
+    <addaction name="actionColor_detection"/>
+    <addaction name="actionImage_histogram"/>
+    <addaction name="actionHorizontal_flip"/>
+    <addaction name="actionLookup_inverse"/>
+    <addaction name="actionStretch_histogram"/>
+    <addaction name="actionHistogram_equalization"/>
+    <addaction name="actionRegion_extration"/>
+    <addaction name="actionWatershed_segment"/>
+    <addaction name="actionHarris_corner"/>
+   </widget>
+   <widget class="QMenu" name="menuAdvenced_process">
+    <property name="title">
+     <string>advenced_process</string>
+    </property>
+    <addaction name="actionThreshold_image"/>
+    <addaction name="actionMorphological_image"/>
+    <addaction name="actionEdge_detection"/>
+    <addaction name="actionImage_match"/>
+    <addaction name="actionOpen_forward_camera"/>
+    <addaction name="actionOpen_video"/>
+   </widget>
+   <addaction name="basic_process"/>
+   <addaction name="menuAdvenced_process"/>
+  </widget>
+  <action name="actionSalt_pepper">
+   <property name="text">
+    <string>salt_pepper</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionReduce_color">
+   <property name="text">
+    <string>reduce_color</string>
+   </property>
+  </action>
+  <action name="actionImage_gray">
+   <property name="text">
+    <string>image_gray</string>
+   </property>
+  </action>
+  <action name="actionSharpen">
+   <property name="text">
+    <string>sharpen</string>
+   </property>
+  </action>
+  <action name="actionChannel_split_B">
+   <property name="text">
+    <string>channel_split(B)</string>
+   </property>
+  </action>
+  <action name="actionChannel_split_G">
+   <property name="text">
+    <string>channel_split(G)</string>
+   </property>
+  </action>
+  <action name="actionCahnnel_split_R">
+   <property name="text">
+    <string>cahnnel_split(R)</string>
+   </property>
+  </action>
+  <action name="actionColor_detection">
+   <property name="text">
+    <string>color_detection</string>
+   </property>
+  </action>
+  <action name="actionImage_histogram">
+   <property name="text">
+    <string>image_histogram</string>
+   </property>
+  </action>
+  <action name="actionThreshold_image">
+   <property name="text">
+    <string>threshold_image</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_flip">
+   <property name="text">
+    <string>horizontal_flip</string>
+   </property>
+  </action>
+  <action name="actionLookup_inverse">
+   <property name="text">
+    <string>lookup_inverse</string>
+   </property>
+  </action>
+  <action name="actionStretch_histogram">
+   <property name="text">
+    <string>stretch_histogram</string>
+   </property>
+  </action>
+  <action name="actionHistogram_equalization">
+   <property name="text">
+    <string>histogram_equalization</string>
+   </property>
+  </action>
+  <action name="actionRegion_extration">
+   <property name="text">
+    <string>region_extration_grabcut</string>
+   </property>
+  </action>
+  <action name="actionMorphological_image">
+   <property name="text">
+    <string>morphological_image</string>
+   </property>
+  </action>
+  <action name="actionWatershed_segment">
+   <property name="text">
+    <string>watershed_segment</string>
+   </property>
+  </action>
+  <action name="actionEdge_detection">
+   <property name="text">
+    <string>edge_detection</string>
+   </property>
+  </action>
+  <action name="actionHarris_corner">
+   <property name="text">
+    <string>harris_corner</string>
+   </property>
+  </action>
+  <action name="actionImage_match">
+   <property name="text">
+    <string>image_match</string>
+   </property>
+  </action>
+  <action name="actionOpen_forward_camera">
+   <property name="text">
+    <string>open_forward_camera</string>
+   </property>
+  </action>
+  <action name="actionOpen_video">
+   <property name="text">
+    <string>open_video</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
